@@ -1,0 +1,256 @@
+java script
+------------
+Used to give behaviour
+Dynamically typed language
+single thread programming language- one by one
+template literals -used to display
+
+-----------------------------------------
+
+content display : console.log(content)
+
+data types:
+------------
+1) text - string
+2) integer or decimel -number
+3) true/false - boolean
+
+
+variables : used to store data
+
+identifiers : Rules to create variable
+
+
+rules:
+--------
+1) should start with characters
+2) more than one word - no space b/w the words
+                     - first letter of the second word capital
+                     - underscore b/w two words
+
+
+
+define keyword variable_name
+
+keywords:
+----------
+. const
+. var (able to reassign)
+. let (able to reassign)
+
+
+
+CONDITIONAL STATEMENTS/ DECISION MAKING STATEMENTS
+
+1) if else 
+
+if(condition){
+    statement
+}
+else{
+    statement
+}
+
+
+looping statement :to do task repeatedly
+1)while 
+        syntax
+        initialise a variable
+        while(condition){
+            statement
+            to update variable
+        }
+
+
+2)for
+      (initializingvariable;condition;increment){
+       statement
+       }
+
+9)functions : used to do a task repeatdly at different portions of a code
+------------------------------------
+syntax
+function_name(){
+  statement
+}
+-----------------------------
+  a) normal function-
+      to do a task repeatedly at the different portions of a code
+
+function have two parts
+  i) function definition
+  ii) function call
+
+
+ function definition
+  function function_name(arg1,................argn){
+    task- statement
+  }
+
+  function call
+  function-name(arg1........................,argn)
+  
+
+  function hoisting: call a function before defining
+  ------------------------------
+  scope function variable: block scope
+
+
+
+  b)arrow function-
+    syntax
+      variable = (arg1,.....................argn)=>{statement}
+      hoisting is not possible in arrow function
+
+
+
+  c)predefined functions- already defined - just need to call
+    eg: console.log()
+        typeof()
+        parseint()
+        alert()
+        number()
+        -global accessible
+
+  d)call back function-
+     function called inside  another function
+     
+
+      .Synchronous- executed at the time
+
+      .Asynchronous- executed at a time interval
+
+      .Anonymous function- self executed function
+
+
+  e)Nested functions-
+     function definition inside another function definition
+
+
+  Array : can hold more than one value in a single variable
+  --------------------------------   
+  syntax-
+         variable_name=[]
+
+ Array  can hold more than one datatype which each items is enclosed within a square bracket
+      
+ Arrays are stored in key value pairs
+ key: index
+ value : value in the above box
+ eg : 0
+
+ index  : starts from 0
+
+ length : starts from 1
+
+ array length in javascript is infinite
+
+
+ array methods
+ ------------------
+ 1)push     : to add new item to an array at end - no change in the value in existing values
+ 2)unshift  : to add new item to an array at begining
+ 3)pop      : to remove last item from the array
+ 4)shift    : to remove first item from the array
+ 5)sort     : to arrange an array in  ascending (a-b) or descending order (b-a)
+ 6)foreach  : same as that of for of -return void
+ 7)map(callback):create array with same number of items as that of parent array
+ 8)reduce() : return a single value from the array highest lowest total
+ 9)filter() : to create a new array from the existing array with elements statisfying certain condition
+10)flat(depth)   : 2d to 1d TO CHANGE DIMENTION
+11)find()   : to get a single value from  the array -return value
+12)includes():to get a single value from  the array -return true or false
+13)some()   : return true or false- based on condition
+14)splice() : to add or remove items from a particular position in an array
+15)indexof(): return index of a particular item
+16)slice(index): remove an item from a particular index position
+
+ Different ways to display array items
+ ---------------------------------------------
+ 1)for
+ 2)forin-INDEX VALUE
+ 3)forof-
+
+
+ STRING methods
+ ---------------------------------------------
+   1) startswith:to check whether a given string starts with a particular leter/character-[case sensitive]
+   2) endswith:to check whether a given string ends with a particular leter/character-[case sensitive]
+   3) subdtring():end is excluded - create a new string form the given string
+   4) uppercase():to convert into capital ltters
+
+   5) to lowercase():to convert into small letters
+   6) tirm(): to remove extra space at the start and end points
+   7) slice(): to create a new string
+   8) split():
+   ------------------------------------------
+
+   array of objects- object inside array to store multiple data
+   display -object_name["key"]
+   -------------------------------------------------------
+
+
+
+   ***************OOP-[OBJECT ORIENTED programming]*****************
+   ----------------
+   1*CLASS- class is a blueprint 
+   2*OBJECT-created form the class
+   3*REFERENCE-memory locations where properties and methods are stored
+
+
+
+   class syntax-------------------
+   -property= variables inside class
+   -constructors= to initialize a property
+   -methods= functions inside class 
+
+
+   objct syntax---------
+   -varibale-name =New claas_name()
+
+
+
+EXCEPTION -HANDLING= RUN TIMME ERRORS
+1)try-stmt that might commit error
+2)catch-statement taht to be executed in case of error
+3)finally-stmt that to be executed in both case
+
+
+
+
+--------------------------------------------------------------------------------------------
+javascript in frontend
+
+browser engine - directly html file cssfile js file repeatdly
+js - cannot read html elelmnts directly
+DOM document object model
+_________________________________________________
+DOM is a tree sturecture created by browser while loading an html file
+                        ______
+                        |html|
+                        /    \ 
+                       /      \     
+                  |head|      |body| 
+                  /    \           \
+                 /      \           \
+               |meta|   |title|      |h1|
+
+
+
+        js can access dom 
+----------------------------------------------------------------
+        *how to connect js to html file*
+----------------------------------------------------------------
+1)internal js-<script></script> prefer after losing of body  tag
+
+2)external js-<script src="url">
+        external is prefered -reduces html file complexity and loading time
+
+
+   -----------------------------------------------
+   how to access html tag using js
+--------------------------------------------------
+
+1) document.getElementByTagName("tagname")-return htmlcollection -similar- to array
+
+2) 

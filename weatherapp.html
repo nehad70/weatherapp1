@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./WeatherStyle.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="search ">
+<input type="text" placeholder="Enter City Name">
+<button>
+    <img src="data:image/png;base64,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" alt="search">
+</button>
+</div>
+<div class="error">
+    <p>Invalid City Name</p>
+</div>
+<div class="weather">
+    <img src="https://c4.wallpaperflare.com/wallpaper/717/141/158/darkness-rain-drops-birds-wallpaper-preview.jpg" class="icon" alt="">
+    <h1 class="celcius">22°c</h1>
+    <h2 class="city">London</h2>
+    <div class="detail">
+        <div class="col">
+            <img src="https://scx2.b-cdn.net/gfx/news/hires/2022/measuring-climate-chan.jpg" alt="">
+            <div class="humidity">
+                <p class="humidityP">20%</p>
+                <p>Humidity</p>
+            </div>
+        </div>
+        <div class="col">
+            <img src="https://images.unsplash.com/photo-1508435019585-b4397e835af9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE4fHx8ZW58MHx8fHx8&w=1000&q=80" alt="">
+            <div class="wind">
+                <p class="windS">20k/h</p>
+                <p>Wind</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+    </div>
+    <script>
+        const searchInput =document.querySelector('.search input');
+        const searchBtn =document.querySelector('.search button');
+        const image =document.querySelector('.icon');
+       async function getWeather(city){
+        var res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=16bfa98849718de13b6e8978b87d47b8&units=metric`)
+        if(res.status == 404){
+            document.querySelector('.error').style.display ="block"
+        }else{
+            document.querySelector('.error').style.display ="none"
+        }
+        var data = await res.json();
+        console.log(data);
+        document.querySelector('.celcius').innerHTML =Math.round(data.main.temp) + "°c";
+        document.querySelector('.city').innerHTML =data.name ;
+        document.querySelector('.humidityP').innerHTML =Math.round (data.main.humidity) + "%";
+        document.querySelector('.windS').innerHTML =Math.round(data.wind.speed) + "km/h";
+
+        if(data.weather[0].main =="Clouds"){
+            image.src ="./images/clouds.png"
+        }
+        else if(data.weather[0].main =="Clear")
+        {
+            image.src ="./images/clear.png"
+        }
+        else if(data.weather[0].main =="Rain")
+        {
+            image.src ="./images/rain.png"
+        }
+        else if(data.weather[0].main =="Mist"){
+            image.src ="./images/mist.png"
+        }
+       }
+       searchBtn.addEventListener('click',() => {
+        getWeather(searchInput.value);
+       })
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>movie</title>
+</head>
+<body >
+    <center>
+        
+  <h1>Movie</h1>
+  <label for="movieInput">Enter Movie Name: </label>
+  <input type="text" id="movieInput">
+  <button onclick="searchMovie()">Search</button>
+
+  <div id="movieDetails"></div>
+
+  <script>
+    const apiKey = 'fa1c9c03';
+
+    async function searchMovie() {
+      const movieName = document.getElementById('movieInput').value;
+
+      try {
+        const response = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&t=${movieName}`);
+        const data = await response.json();
+
+        if (data.Response === 'True') {
+          displayMovieDetails(data);
+        } else {
+          document.getElementById('movieDetails').innerHTML = 'Movie not found!';
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+    function displayMovieDetails(movie) {
+      const detailsContainer = document.getElementById('movieDetails');
+
+      detailsContainer.innerHTML = `
+        <h2>${movie.Title}</h2>
+        <p><strong>Released:</strong> ${movie.Released}</p>
+        <p><strong>Actors:</strong> ${movie.Actors}</p>
+        <p><strong>Plot:</strong> ${movie.Plot}</p>
+        <p><strong>Ratings:</strong> ${movie.Ratings.map(rating => `${rating.Source}: ${rating.Value}`).join(', ')}</p>
+        <img src="${movie.Poster}" alt="${movie.Title} Poster">
+      `;
+    }
+  </script>
+  </center>
+</body>
+</html>
